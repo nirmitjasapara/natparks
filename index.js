@@ -16,11 +16,11 @@ function displayResults(responseJson) {
   console.log(responseJson);
   $('#results-list').empty();
   // iterate through the items array
-  responseJson.data.array.forEach(item => {
+  responseJson.data.forEach(item => {
     $('#results-list').append(
       `<li><h3>${item.fullName}</h3>
       <p>${item.description}</p>
-      <a>${item.url}</a>
+      <a href=${item.url}>${item.url}</a>
       </li>`
     )});
   //display the results section  
